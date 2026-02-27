@@ -34,3 +34,9 @@ User Output Component
 This component should display the HTML with Higlighted keywords in Word GRID puzzle.
 Langflow Diagram:
 <img width="1280" height="532" alt="image" src="https://github.com/user-attachments/assets/69c198b5-af3d-43b2-bf7d-9399528ff280" />
+
+Output:
+<img width="1280" height="571" alt="image" src="https://github.com/user-attachments/assets/15094645-b7ec-4c5a-b53b-00b8e56d03a0" />
+<img width="1280" height="572" alt="image" src="https://github.com/user-attachments/assets/ef2bd35a-cb5e-4f59-8314-e21eab7c73e6" />
+
+
