@@ -1,8 +1,8 @@
 Goal:
 
 User want to search & highlight words from image having letter grid. [https://www.rd.com/wp-content/uploads/2020/04/house_wordsearch-scaled.jpg?fit=750%2C750&original_fit=700,700]
-Agentic Flow
 
+Agentic Flow
 User will input the prompt for keywords he need to search in grid.
 A transformer agent will fetch the image from URL and convert into Base64 Format.
 A transformer agent will convert Base64 format into 2D JSON Grid.
