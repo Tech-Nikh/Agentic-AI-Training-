@@ -1,35 +1,17 @@
-Goal:
+User Interaction Document
 
-User want to search & highlight words from image having letter grid. [https://www.rd.com/wp-content/uploads/2020/04/house_wordsearch-scaled.jpg?fit=750%2C750&original_fit=700,700]
+Problem Statement: We need to find the words from the images having word puzzle & highlight in the image as a agentic AI langflow output.
 
-Agentic Flow
-User will input the prompt for keywords he need to search in grid.
-A transformer agent will fetch the image from URL and convert into Base64 Format.
-A transformer agent will convert Base64 format into 2D JSON Grid.
-A word search component will search the inputted keyword inside the 2D JSON grid. It will search the keywords in 2D JSON Grid & format in html as Output.
-Agent Components & Responsibilities:
+User Flow
 
-Input Function:
+We will collect all the random letters from the image. AI - Tool Call: To extract the Letters from the Image & Prepare the table.
+We should know all the words present inside the image. For Ex: THANOS, BATMAN, SPIDERMAN, CAPTAIN AMERICA AI - Search the words inside the Table & Highlight. AI - Search the words in horizontal, vertical & diagonal manner for matching.
+How to plot the puzzle words inside the LLM/Image Suggestion: we can prepare the plotting for word puzzle inside the table format in html. Ask LLM to find the word from the table & highlight it. AI - Prepare table with highlighted output in HTML.
+Prompt for extract: Extract the 2D Letter Grid from the image in JSON. Highlight the word from the 2D Grid.
 
-Input will be received from end user through chat input component.
-Input should be passed to LLM to generate the specific keywords.
-It should give specific keywords comma seperated as a output in capital letters. For ex: KITCHEN,FOUNDATIONS,DRAINPIPE
-Base 64 Image Conversion Agent:
+Chat input (Image) --> Extract the Letters & keep in HTML Table format --> Search the Words inside the HTML Rows & Columns to make a word --> Highlight the words in different color inside the HTML & Give the output. Chat input -->
 
-A word grid image specified from particular URL should be fetched by this agent.
-It should convert this image content to Base64 using LLM Call.
-It should give output a Base64 Format.
-Convert Base64 to 2D JSON Agent
-
-Output text obtained from base64 conversion agent should be received as a input.
-This input should be pass to LLM to convert Base64 text into 2D letter JSON GRID.
-Words Finder & Highlighter Component
-
-2D JSON Grid obtained from above agent should be received as input.
-Keywords obtained from input component also should be taken as input.
-Keywords should be searched in JSON & will be highlighted in HTML format.
-HTML Format with highlighted keywords should be given as Output.
-User Output Component
+Tools Required: Custom Component Python Intepretor (REPL)
 
 This component should display the HTML with Higlighted keywords in Word GRID puzzle.
 Langflow Diagram:
